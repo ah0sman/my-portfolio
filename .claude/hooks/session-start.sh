@@ -9,3 +9,12 @@ fi
 # Install npm dependencies
 # npm install is idempotent and uses the package-lock.json for consistency
 npm install
+
+# Verify linter and test infrastructure are working
+echo "Verifying Biome linter..."
+npx biome --version > /dev/null
+
+echo "Verifying Vitest..."
+npx vitest --version > /dev/null
+
+echo "Session start hook completed successfully"
